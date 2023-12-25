@@ -81,7 +81,7 @@ body {
     position: relative;
     top: 50px;
     left: 50%;
-    transform: translateX(-20%);
+    transform: translateX(-50%);
 }
 
 .wrapper.vis-hidden {
