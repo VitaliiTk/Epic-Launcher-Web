@@ -80,7 +80,7 @@ body {
     padding: 5px;
     position: relative;
     top: 50px;
-    left: 150px;
+    left: 50%;
 }
 
 .wrapper.vis-hidden {
