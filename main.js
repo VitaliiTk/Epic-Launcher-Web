@@ -84,7 +84,6 @@ leftMenuLinks.forEach(element => {
 
 function downloadsWindowClose(event) {
     document.querySelector('.right-side').classList.toggle('download-active')
-    console.log('click link');
     event.stopPropagation()
 }
 
@@ -92,6 +91,3 @@ downloadLink.addEventListener('click', downloadsWindowClose)
 downloadTopBar.addEventListener('click', downloadsWindowClose)
 downloadWrapper.addEventListener('click', downloadsWindowClose)
 downloadMenu.addEventListener('click', event => event.stopPropagation())
-
-
-console.log('gitignore');
