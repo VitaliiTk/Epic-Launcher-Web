@@ -92,3 +92,6 @@ downloadLink.addEventListener('click', downloadsWindowClose)
 downloadTopBar.addEventListener('click', downloadsWindowClose)
 downloadWrapper.addEventListener('click', downloadsWindowClose)
 downloadMenu.addEventListener('click', event => event.stopPropagation())
+
+
+console.log('gitignore');
