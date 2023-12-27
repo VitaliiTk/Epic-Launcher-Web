@@ -37,6 +37,25 @@ topMenuBtn.forEach((element, index) => {
     element.addEventListener('click', () => {
         menuItem.forEach(item => item.classList.remove('selected'))
         menuItem[index].classList.add('selected')
+
+        document.querySelectorAll('.right-side__wrapper').forEach(element => element.classList.remove('active'))
+        switch (index) {
+            case 0:
+                document.querySelector('#news').classList.add('active')
+                break
+            case 1:
+                document.querySelector('#examples').classList.add('active')
+                break
+            case 2:
+                document.querySelector('#store').classList.add('active')
+                break
+            case 3:
+                document.querySelector('#library').classList.add('active')
+                break
+            case 4:
+                document.querySelector('#twinmotion').classList.add('active')
+                break
+        }
     })
 })
 
@@ -125,7 +144,6 @@ settingsTopBar.addEventListener('click', event => {
 })
 
 settingsContentContent.addEventListener('scroll', e => {
-    console.log(e.target.scrollTop);
     if (e.target.scrollTop > 0) settingsTopBar.classList.add('shadow')
     else settingsTopBar.classList.remove('shadow')
 })

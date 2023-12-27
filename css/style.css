@@ -353,12 +353,20 @@ body {
 
 .right-side__wrapper {
     padding-right: 25px;
+    display: none;
 }
+
+.right-side__wrapper .content {
+    padding: 20px;
+}
+
+
 
 .banner {
     width: 100%;
     height: 200px;
     padding: 20px;
+    padding-bottom: 0;
     position: relative;
 }
 
@@ -601,4 +609,21 @@ body {
 
 .shadow {
     box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.39);
+}
+
+.right-side__wrapper.active {
+    display: block;
+}
+
+
+.right-side__wrapper h2 {
+    text-transform: uppercase;
+}
+
+#news.active,
+#store.active,
+#examples.active,
+#library.active,
+#twinmotion.active {
+    display: block;
 }
