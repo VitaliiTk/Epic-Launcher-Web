@@ -79,7 +79,7 @@ body {
     border: 1px solid #635f5f;
     padding: 5px;
     position: relative;
-    top: 50px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -143,7 +143,7 @@ body {
 
 .left-menu__list-item a {
     font-size: 16px;
-    color: #929292;
+    color: #6b6b6b;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -221,32 +221,37 @@ body {
     left: 0;
 }
 
-.download-menu__top-bar {
+.download-menu__top-bar,
+.settings-content__top-bar {
     border-bottom: 2px solid #363636;
     padding: 20px;
     display: flex;
     align-items: center;
 }
 
-.download-menu__top-bar:hover {
+.download-menu__top-bar:hover,
+.settings-content__top-bar:hover {
     cursor: pointer;
     background-color: #2A2A2A;
 }
 
-.download-menu__top-bar .material-symbols-outlined {
+.download-menu__top-bar .material-symbols-outlined,
+.settings-content__top-bar .material-symbols-outlined {
     border-right: 2px solid #363636;
     color: #aaaaaa;
     padding-right: 5px;
     line-height: 30px;
 }
 
-.download-menu__top-text {
+.download-menu__top-text,
+.settings-content__top-text {
     margin-left: 20px;
     text-transform: uppercase;
     color: #aaaaaa;
 }
 
-.download-menu__content {
+.download-menu__content,
+.settings-content__content {
     padding: 20px;
 }
 
@@ -463,4 +468,49 @@ body {
 
 .display-none {
     display: none;
+}
+
+.left-menu__list-item.acount {
+    position: relative;
+}
+
+.acount-setings {
+    list-style: none;
+    background-color: #121212;
+    border: 1px solid #000;
+    padding: 20px;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    z-index: 1;
+    width: 306px;
+    display: none;
+}
+
+.acount-setings__link {
+    padding: 10px;
+    font-weight: 400;
+}
+
+.acount-setings__link:hover {
+    background-color: #DEA309;
+    color: #000;
+    font-weight: 400;
+}
+
+.acount-setings.active {
+    display: block;
+}
+
+.settings-content {
+    position: absolute;
+    width: 99%;
+    height: 95%;
+    background-color: #202020;
+    z-index: 3;
+    display: none;
+}
+
+.settings-content.active {
+    display: block;
 }

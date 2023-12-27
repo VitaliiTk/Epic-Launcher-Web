@@ -11,6 +11,12 @@ const downloadLink = document.querySelector('#downloads')
 const downloadTopBar = document.querySelector('.download-menu__top-bar')
 const downloadWrapper = document.querySelector('.download-wrapper')
 const downloadMenu = document.querySelector('.download-menu')
+const acount = document.querySelector('#acount')
+const acountSettings = document.querySelector('.acount-setings')
+const settingsLink = document.querySelector('#settings')
+const settingsContent = document.querySelector('.settings-content')
+const settingsTopBar = document.querySelector('.settings-content__top-bar')
+
 
 // if input have text inside, clear icon is visible and backwards
 searchInput.addEventListener('input', (event) => {
@@ -72,7 +78,13 @@ windowCloseIcon.addEventListener('click', (event) => {
     appWindow.classList.add('display-none')
 })
 
-appWindow.addEventListener('click', event => event.stopPropagation())
+appWindow.addEventListener('click', event => {
+    event.stopPropagation()
+    if (acountSettings.classList.contains('active')) {
+        acountSettings.classList.toggle('active')
+        console.log('wrapper click');
+    }
+})
 appWindow.addEventListener('contextmenu', event => event.stopPropagation())
 
 leftMenuLinks.forEach(element => {
@@ -91,3 +103,21 @@ downloadLink.addEventListener('click', downloadsWindowClose)
 downloadTopBar.addEventListener('click', downloadsWindowClose)
 downloadWrapper.addEventListener('click', downloadsWindowClose)
 downloadMenu.addEventListener('click', event => event.stopPropagation())
+
+acount.addEventListener('click', event => {
+    event.stopPropagation()
+    acountSettings.classList.toggle('active')
+    console.log('click');
+})
+
+acountSettings.addEventListener('click', event => event.stopPropagation())
+
+settingsLink.addEventListener('click', event => {
+    event.stopPropagation()
+    settingsContent.classList.toggle('active')
+})
+
+settingsTopBar.addEventListener('click', event => {
+    event.stopPropagation()
+    settingsContent.classList.toggle('active')
+})
