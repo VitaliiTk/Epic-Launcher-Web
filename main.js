@@ -123,3 +123,9 @@ settingsTopBar.addEventListener('click', event => {
     event.stopPropagation()
     settingsContent.classList.toggle('active')
 })
+
+settingsContentContent.addEventListener('scroll', e => {
+    console.log(e.target.scrollTop);
+    if (e.target.scrollTop > 0) settingsTopBar.classList.add('shadow')
+    else settingsTopBar.classList.remove('shadow')
+})
