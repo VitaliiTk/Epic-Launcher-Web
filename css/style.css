@@ -546,8 +546,6 @@ body {
     color: #9D9D9D;
 }
 
-.settings-content__content select {}
-
 .settings-content__content hr {
     border: 1px solid #363636;
     margin-bottom: 30px;
@@ -557,8 +555,6 @@ body {
 .div-checkbox {
     margin-bottom: 20px;
 }
-
-.div-checkbox input {}
 
 .div-checkbox label {
     padding-left: 10px;
