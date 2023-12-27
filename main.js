@@ -17,6 +17,8 @@ const settingsLink = document.querySelector('#settings')
 const settingsContent = document.querySelector('.settings-content')
 const settingsTopBar = document.querySelector('.settings-content__top-bar')
 const settingsContentContent = document.querySelector('.settings-content__content')
+const settingsContentLinks = document.querySelectorAll('.settings-content__content-block a')
+
 
 
 
@@ -146,4 +148,12 @@ settingsTopBar.addEventListener('click', event => {
 settingsContentContent.addEventListener('scroll', e => {
     if (e.target.scrollTop > 0) settingsTopBar.classList.add('shadow')
     else settingsTopBar.classList.remove('shadow')
+})
+
+settingsContentLinks.forEach((element, index) => {
+    element.addEventListener('click', event => {
+        event.stopPropagation()
+        event.preventDefault()
+        console.log(index);
+    })
 })
