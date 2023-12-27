@@ -16,6 +16,8 @@ const acountSettings = document.querySelector('.acount-setings')
 const settingsLink = document.querySelector('#settings')
 const settingsContent = document.querySelector('.settings-content')
 const settingsTopBar = document.querySelector('.settings-content__top-bar')
+const settingsContentContent = document.querySelector('.settings-content__content')
+
 
 
 // if input have text inside, clear icon is visible and backwards
