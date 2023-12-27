@@ -11,6 +11,7 @@ const downloadLink = document.querySelector('#downloads')
 const downloadTopBar = document.querySelector('.download-menu__top-bar')
 const downloadWrapper = document.querySelector('.download-wrapper')
 const downloadMenu = document.querySelector('.download-menu')
+const topBar = document.querySelector('.top-window-nav')
 
 // if input have text inside, clear icon is visible and backwards
 searchInput.addEventListener('input', (event) => {
@@ -58,12 +59,12 @@ desctopIcon.addEventListener('dblclick', (event) => {
 
 document.body.addEventListener('click', (event) => {
     desctopIcon.classList.remove('selected')
-    console.log('body click');
+    console.log('body left click');
 })
 
 document.body.addEventListener('contextmenu', (event) => {
     desctopIcon.classList.remove('selected')
-    console.log('body click');
+    console.log('body right click');
     // document.body.oncontextmenu = 'true'
 })
 
@@ -74,6 +75,10 @@ windowCloseIcon.addEventListener('click', (event) => {
 
 appWindow.addEventListener('click', event => event.stopPropagation())
 appWindow.addEventListener('contextmenu', event => event.stopPropagation())
+topBar.addEventListener('dragover', event => {
+    event.preventDefault()
+    event.stopPropagation()
+})
 
 leftMenuLinks.forEach(element => {
     element.addEventListener('click', event => {
